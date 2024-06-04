@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CountContext } from "./App";
+import { CountContext } from "./context/CounterContext";
 
 export default function Banner() {
   const context = useContext(CountContext);
