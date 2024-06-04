@@ -1,8 +1,9 @@
+import React from "react";
 import CheckBox from "./html/CheckBox";
 import SvgClose from "./icons/SvgClose";
 import { TTodo } from "./Todo";
 
-export default function TodoListItem({
+function TodoListItem({
   todo,
   toggleTodo,
   deleteTodo,
@@ -32,3 +33,5 @@ export default function TodoListItem({
     </li>
   );
 }
+
+export default React.memo(TodoListItem);

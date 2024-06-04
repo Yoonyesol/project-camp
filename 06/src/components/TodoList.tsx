@@ -7,8 +7,13 @@ type TTodoListProps = {
   deleteTodo: (id: string) => void;
 };
 
-export default function TodoList(props: TTodoListProps) {
+function TodoList(props: TTodoListProps) {
   const { todos, toggleTodo, deleteTodo } = props;
+
+  //useMemo를 이용해 함수를 메모이제이션 => 제대로 동작함을 확인
+  // const memoToggleTodo = useMemo(() => toggleTodo, []);
+  // const memoDeleteTodo = useMemo(() => deleteTodo, []);
+
   return (
     <>
       <ul className="flex flex-col gap-4 mt-4">
@@ -24,3 +29,5 @@ export default function TodoList(props: TTodoListProps) {
     </>
   );
 }
+
+export default TodoList;
