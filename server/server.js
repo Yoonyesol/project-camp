@@ -27,13 +27,13 @@ app.post("/todos", (req, res) => {
     completed: false,
   };
   todos.push(newTodo);
-  res.status(201).json(newTodo);
+  res.status(200).json(newTodo);
 });
 
 app.delete("/todos/:id", (req, res) => {
   const { id } = req.params;
   todos = todos.filter((todo) => todo.id !== id);
-  res.status(204).send();
+  res.status(200).send();
 });
 
 app.patch("/todos/:id", (req, res) => {
