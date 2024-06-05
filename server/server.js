@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const { v4: uuidv4 } = require("uuid");
 
@@ -6,6 +7,7 @@ const app = express();
 const port = 4000;
 
 app.use(bodyParser.json());
+app.use(cors()); //모든 origin에 허용
 
 let todos = [];
 
