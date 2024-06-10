@@ -1,18 +1,11 @@
-"use client";
+import { Roboto } from "next/font/google";
+const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"] });
 
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-
-export default function page() {
-  const router = useRouter();
-  console.log(router);
-
-  const onClickHandler = () => {
-    console.log("click");
-  };
+export default function Home() {
   return (
-    <div>
-      page<button onClick={onClickHandler}>클릭</button>
-    </div>
+    <>
+      <h1 className="roboto">Home Component</h1>
+      <h1 className={roboto.className}>Home Component</h1>
+    </>
   );
 }
