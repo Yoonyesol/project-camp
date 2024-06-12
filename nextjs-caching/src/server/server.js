@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const posts = [
-  { id: 1, title: "Post 1", content: "This is the first post" },
+  { id: 1, title: "Post 15646", content: "This is the first post" },
   { id: 2, title: "Post 2", content: "This is the Two post" },
   { id: 3, title: "Post 3", content: "This is the Third post" },
 ];
